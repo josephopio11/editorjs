@@ -47,8 +47,8 @@ export default function Editor() {
   const save = () => {
     if (ref.current) {
       ref.current.save().then((outputData) => {
-        console.log("Article Data: ", outputData);
-        alert(JSON.stringify(outputData, null, 2));
+        console.log("Article Data: ", JSON.stringify(outputData)); // JSON-string from body response
+        // alert(JSON.stringify(outputData, null, 2));
       });
     }
   };
